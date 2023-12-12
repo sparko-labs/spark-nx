@@ -10,23 +10,21 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spark-nx/express": ["packages/express/src/index.ts"],
-      "@spark-nx/expressjs": ["packages/expressjs/src/index.ts"],
-      "@spark-nx/flutter": ["packages/flutter/src/index.ts"],
-      "@spark-nx/go": ["packages/go/src/index.ts"],
-      "@spark-nx/nest": ["packages/nest/src/index.ts"],
-      "@spark-nx/nestjs": ["packages/nestjs/src/index.ts"],
-      "@spark-nx/nuxt2": ["packages/nuxt2/src/index.ts"],
-      "@spark-nx/nuxt3": ["packages/nuxt3/src/index.ts"],
-      "@spark-nx/react": ["packages/react/src/index.ts"],
-      "@spark-nx/vue2": ["packages/vue2/src/index.ts"],
-      "@spark-nx/vue3": ["packages/vue3/src/index.ts"]
+      "@spark-nx/flutter": [
+        "packages/flutter/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
