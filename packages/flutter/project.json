@@ -42,7 +42,8 @@
       "options": {
         "lintFilePatterns": [
           "packages/flutter/**/*.ts",
-          "packages/flutter/package.json"
+          "packages/flutter/package.json",
+          "packages/flutter/generators.json"
         ]
       }
     },
