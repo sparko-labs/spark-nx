@@ -1,0 +1,58 @@
+{
+  "name": "vue2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/vue2/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/vue2",
+        "main": "packages/vue2/src/index.ts",
+        "tsConfig": "packages/vue2/tsconfig.lib.json",
+        "assets": [
+          "packages/vue2/*.md",
+          {
+            "input": "./packages/vue2/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/vue2/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/vue2",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/vue2",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/vue2/**/*.ts",
+          "packages/vue2/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/vue2/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

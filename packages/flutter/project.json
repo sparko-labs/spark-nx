@@ -1,0 +1,58 @@
+{
+  "name": "flutter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/flutter/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/flutter",
+        "main": "packages/flutter/src/index.ts",
+        "tsConfig": "packages/flutter/tsconfig.lib.json",
+        "assets": [
+          "packages/flutter/*.md",
+          {
+            "input": "./packages/flutter/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/flutter/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/flutter",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/flutter",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/flutter/**/*.ts",
+          "packages/flutter/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/flutter/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
