@@ -36,14 +36,17 @@
         ]
       }
     },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs flutter {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "packages/flutter/**/*.ts",
-          "packages/flutter/package.json",
-          "packages/flutter/generators.json"
+          "packages/flutter/package.json"
         ]
       }
     },
