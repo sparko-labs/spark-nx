@@ -18,7 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spark-nx/flutter": [
+      "@sparko-nx/flutter": [
         "packages/flutter/src/index.ts"
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "name": "@spark-nx/source",
+  "name": "@sparko-nx/source",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "targets": {
     "local-registry": {

@@ -1,5 +1,5 @@
 {
-  "name": "@spark-nx/flutter",
+  "name": "@sparko-nx/flutter",
   "publishConfig": {
     "access": "public"
   },
