@@ -1,17 +1,23 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/schema",
   "$id": "Lint",
   "title": "",
   "type": "object",
   "properties": {
-    "name": {
+    "project": {
       "type": "string",
       "description": "",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What name would you like to use?"
+      "x-prompt": "What is the project directory"
+    },
+    "hasTS": {
+      "type": "boolean",
+      "description": "",
+      "$default": true,
+      "x-prompt": "Does this project use TS or not"
     }
   },
   "required": ["name"]

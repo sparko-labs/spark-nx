@@ -1,3 +1,4 @@
 export interface LintGeneratorSchema {
-  name: string;
+  project: string;
+  hasTS: boolean;
 }
